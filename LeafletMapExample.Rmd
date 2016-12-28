@@ -1,0 +1,19 @@
+---
+title: "LeafletMapExample"
+author: "Gavin Kim"
+date: "2016-12-27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Created data : December 27, 2016
+
+```{r leafletMap}
+suppressWarnings(library(leaflet))
+
+leaflet() %>% addTiles() %>% addCircleMarkers(data = data.frame(lat = c(39.305556, 39.305556), lng = c(-76.589347, -76.527275)), radius = 30) %>% addRectangles(lng1 = -76.588347, lat1 = 39.300556, lng2 = -76.528275, lat2 = 39.283556)
+```
+
